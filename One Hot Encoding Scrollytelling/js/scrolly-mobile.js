@@ -36,7 +36,7 @@ function handleStepEnter(response) {
     });
 
     // update graphic based on step - adapted for Flourish
-    const linkHead = 'https://flo.uri.sh/story/3018482/embed#slide-'
+    const linkHead = 'https://flo.uri.sh/story/3045977/embed#slide-'
     const slide = response.index
 
     d3.select('figure iframe')
