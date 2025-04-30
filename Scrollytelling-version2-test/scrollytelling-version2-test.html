@@ -322,8 +322,7 @@
     		var stepH = Math.floor(window.innerHeight * 1);
     		step.style("height", stepH + "px");
 
-    		var isMobile = window.innerWidth < 768;
-			var figureHeight = isMobile ? window.innerHeight : window.innerHeight * 1;
+			var figureHeight = window.innerHeight * 0.95; 
     		var figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
     		figure
