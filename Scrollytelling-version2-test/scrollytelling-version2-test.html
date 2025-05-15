@@ -322,7 +322,7 @@
     		var stepH = Math.floor(window.innerHeight * 1);
     		step.style("height", stepH + "px");
 
-			var figureHeight = window.innerHeight * 0.95; 
+			var figureHeight = window.innerHeight * 0.75; 
     		var figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
     		figure
@@ -363,7 +363,7 @@
         		.setup({
             		step: "#scrolly article .step",
             		offset: 0.75,
-            		debug: false
+            		debug: true
         		})
         		.onStepEnter(handleStepEnter);
 		}
