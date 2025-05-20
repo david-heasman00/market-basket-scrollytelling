@@ -117,6 +117,18 @@
     		font-size: 1rem;
 		}
 
+		.step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+		.step-highlight-true {
+			background:white; color:#40A15D; font-weight:bold;
+		}
+
+		.step-highlight-false {
+			background:white; color:#C63F2A; font-weight:bold;
+		}
+
 		iframe {
    		border: none;
 		}
@@ -220,6 +232,18 @@
     		font-size: 1.2rem;
 		}
 
+		.step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+		.step-highlight-true {
+			background:white; color:#40A15D; font-weight:bold;
+		}
+
+		.step-highlight-false {
+			background:white; color:#C63F2A; font-weight:bold;
+		}
+
 		iframe {
    			border: none;
 		}
@@ -248,34 +272,34 @@
 			<!--"Article"/Steps section of Scrollytelling-->
 			<article>
 				<div class="step" data-step="1">
-					<p>Lorem Ipsum</p>
+					<p>One hot encoding turns your data into a binary <span class="step-highlight-true">true</span> or <span class="step-highlight-false">false</span> form</p>
 				</div>
 				<div class="step" data-step="2">
-					<p>Lorem Ipsum</p>
+					<p>If you do this with continuous data, without binning it, or turning it categorical you run into the following problem…</p>
 				</div>
 				<div class="step" data-step="3">
-					<p>Lorem Ipsum</p>
+					<p>For example if we have the height of 10 students.</p>
 				</div>
 				<div class="step" data-step="4">
-					<p>Lorem Ipsum</p>
+					<p>And we one hot encode this, we will get quite a few columns (9 because two people share the same height).</p>
 				</div>
 				<div class="step" data-step="5">
-					<p>Lorem Ipsum</p>
+					<p>That’s just for <span class="step-highlight">one</span> category or factor.</p>
 				</div>
 				<div class="step" data-step="6">
-					<p>Lorem Ipsum</p>
+					<p>This project is looking at over ten columns or factors.</p>
 				</div>
 				<div class="step" data-step="7">
-					<p>Lorem Ipsum</p>
+					<p>Associated Rule Mining is also computationally expensive. Computation goes up exponentially compared to the number of columns.</p>
 				</div>
 				<div class="step" data-step="8">
-					<p>Lorem Ipsum</p>
+					<p>If we, instead, <span class="step-highlight">bin</span> our heights. For example into low, medium, or high…</p>
 				</div>
 				<div class="step" data-step="9">
-					<p>Lorem Ipsum</p>
+					<p>We get <span class="step-highlight">three columns</span> instead of the 20 from earlier.</p>
 				</div>
 				<div class="step" data-step="10">
-					<p>Lorem Ipsum</p>
+					<p>Which means, not just less computation time, but easier to digest insights.</p>
 				</div>
 			</article>
 			
