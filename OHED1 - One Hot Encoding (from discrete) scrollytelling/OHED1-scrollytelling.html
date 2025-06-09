@@ -117,6 +117,11 @@
     		font-size: 1rem;
 		}
 
+		.step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+
 		iframe {
    		border: none;
 		}
@@ -220,6 +225,11 @@
     		font-size: 1.2rem;
 		}
 
+		.step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+
 		iframe {
    			border: none;
 		}
@@ -248,34 +258,34 @@
 			<!--"Article"/Steps section of Scrollytelling-->
 			<article>
 				<div class="step" data-step="1">
-					<p>Lorem Ipsum</p>
+					<p>Now that our data is categorised we can <span style="font-weight:bold">one hot encode it</span>.</p>
 				</div>
 				<div class="step" data-step="2">
-					<p>Lorem Ipsum</p>
+					<p>Here we <span style="font-weight:bold;">cast</span> (or widen) our dataset. There is a new column for each category. 
+						And we mark each piece of data as <span style="background:#40A15D; color:white; font-weight:bold;">true</span> 
+						where it falls into the category.</p>
 				</div>
 				<div class="step" data-step="3">
-					<p>Lorem Ipsum</p>
+					<p>Look at the <span style="background:#84C8DB;">Binned_Zero_or_Missing</span> values. 
+						Look at where they are <span style="background:#40A15D; color:white;">true</span>.</p>
 				</div>
 				<div class="step" data-step="4">
-					<p>Lorem Ipsum</p>
+					<p>We do this for each category - notice where <span style="background:#0F7B99;">Binned_Low</span> values are.</p>
 				</div>
 				<div class="step" data-step="5">
-					<p>Lorem Ipsum</p>
+					<p>And <span style="background:#FFCB96;">Binned_Medium</span></p>
 				</div>
 				<div class="step" data-step="6">
-					<p>Lorem Ipsum</p>
+					<p>And, finally <span style="background:#C76C5D;">Binned_High</span></p>
 				</div>
 				<div class="step" data-step="7">
-					<p>Lorem Ipsum</p>
+					<p>Where the cell isn't true, we mark as <span style="font-weight:bold;">false</span>. </p>
 				</div>
 				<div class="step" data-step="8">
-					<p>Lorem Ipsum</p>
+					<p>This is how we one-hot encode our data. How we turn our categorical data, into binary data. Into true or false. One or Zero.</p>
 				</div>
 				<div class="step" data-step="9">
-					<p>Lorem Ipsum</p>
-				</div>
-				<div class="step" data-step="9">
-					<p>Lorem Ipsum</p>
+					<p>We can remove our original column now. Our script has all the information it needs to run a market basket analysis.</p>
 				</div>
 			</article>
 			
