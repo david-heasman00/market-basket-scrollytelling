@@ -1,9 +1,9 @@
-	<!--Scripts Section - load d3, scrollama, and scrollytelling javascript-->
+<!--Scripts Section - load d3, scrollama, and scrollytelling javascript-->
 	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script> 
 	<script src="https://unpkg.com/scrollama"></script>
 	<script>
 		// using d3 for convenience
-		var scrolly = d3.select(".scrolly");
+		var scrolly = d3.selectAll(".scrolly");
 		var figure = scrolly.select("figure");
 		var article = scrolly.select("article");
 		var step = article.selectAll(".step");
@@ -59,7 +59,7 @@
     		// 3. bind scrollama event handlers (this can be chained like below)
     		scroller
         		.setup({
-            		step: "#scrolly article .step",
+            		step: ".scrolly article .step",
             		offset: 0.75,
             		debug: false
         		})
