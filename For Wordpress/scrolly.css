@@ -1,0 +1,213 @@
+/*To go in additional css box in wordpress */
+
+		/* ------------------------------------------------- */
+  		/* Global (applies to all)                          */
+  		/* (If you have any universal styles that aren’t     */
+  		/* wrapped in a media query, you can put them here.) */
+  		/* ------------------------------------------------- */
+	
+		/* ------------------------------------------------- */
+  		/* Mobile styles: up to 992px (from base_mobile.css & scrolly_mobile.css) */
+  		/* ------------------------------------------------- */
+
+		
+		@media (max-width: 992px) {
+		/* ===== base_mobile.css ===== */
+			/* CSS for body and text */
+
+
+		.intro__hed {
+      		font-size: 2rem;
+      		line-height: 3.25rem;
+      		font-weight: 500;
+      		font-family: 'Source Sans 3', sans-serif;
+      		text-align: center;
+		}
+
+		.intro__dek {
+    		font-size: 1.125rem;
+    		font-weight: 400;
+    		line-height: 2rem;
+    		width: 80%;
+    		margin: 0 auto;
+		}
+		/* ===== scrolly_mobile.css ===== */
+		/* CSS for scrollytelling */
+		.scrolly {
+    		position: relative;
+    		padding: 1rem;
+		}
+
+
+		.scrolly article {
+    		position: relative;
+    		padding: 0 1rem;
+    		max-width: 20rem;
+    		margin: 0 auto;
+		}
+
+		.scrolly figure {
+    		position: -webkit-sticky;
+    		position: sticky;
+    		width: 100%;
+    		margin: 0 auto;
+    		-webkit-transform: translate3d(0, 0, 0);
+    		-moz-transform: translate3d(0, 0, 0);
+    		transform: translate3d(0, 0, 0);
+    		z-index: 0;
+		}
+
+		.scrolly figure iframe {
+    		width: 100%;
+    		height: 100%;
+		}
+
+		.scrolly figure p {
+    		text-align: center;
+    		padding: 1rem;
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		-moz-transform: translate(-50%, -50%);
+    		-webkit-transform: translate(-50%, -50%);
+    		transform: translate(-50%, -50%);
+    		font-size: 8rem;
+    		font-weight: 900;
+    		color: #fff;
+		}
+
+		.scrolly .step {
+   			margin: 0 auto 2rem auto;
+		}
+
+		.scrolly .step:last-child {
+   			margin-bottom: 0;
+		}
+
+		.scrolly .last-step {
+    		background-color: none;
+		}
+
+		.scrolly .step.is-active p {
+    		color: #fff;
+    		background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.scrolly .step p {
+    		text-align: center;
+    		padding: 1rem;
+    		font-size: 1rem;
+		}
+
+		.scrolly .step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+
+		.scrolly iframe {
+   		border: none;
+		}
+	}
+
+		/* ------------------------------------------------- */
+  		/* Desktop styles: from 992px onward (base_desktop.css & scrolly_desktop.css) */
+  		/* ------------------------------------------------- */
+		@media (min-width:992px) {
+			/* ===== base_desktop.css ===== */
+			/* CSS for body and text */
+
+
+		.intro__hed {
+    		font-size: 2rem;
+    		line-height: 3.25rem;
+    		font-weight: 500;
+    		font-family: 'Source Sans 3', sans-serif;
+    		text-align: center;
+		}
+
+		.intro__dek {
+  			font-size: 1.125rem;
+  			font-weight: 400;
+  			line-height: 2rem;
+  			width: 43.75rem;
+  			margin: 0 auto;
+			}
+
+		/* ===== scrolly_desktop.css ===== */
+
+		/* CSS for scrollytelling */
+		.scrolly {
+    		position: relative;
+    		display: -webkit-box;
+    		display: -ms-flexbox;
+    		display: flex;
+    		padding: 1rem;
+		}
+
+		.scrolly>* {
+    		-webkit-box-flex: 1;
+    		-ms-flex: 1;
+    		flex: 1;
+		}
+
+		.scrolly article {
+    		position: relative;
+    		padding: 0;
+    		max-width: 20rem;
+    		margin: 0 auto;
+		}
+
+		.scrolly figure {
+    		position: -webkit-sticky;
+    		position: sticky;
+    		width: 100%;
+    		max-width: 62.5rem;
+    		margin: 0 auto;
+    		-webkit-transform: translate3d(0, 0, 0);
+    		-moz-transform: translate3d(0, 0, 0);
+    		transform: translate3d(0, 0, 0);
+    		z-index: 0;
+		}
+
+		.scrolly figure iframe {
+    		width: 100%;
+    		height: 100%;
+		}
+
+		.scrolly figure p {
+    		text-align: center;
+    		padding: 1rem;
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		-moz-transform: translate(-50%, -50%);
+    		-webkit-transform: translate(-50%, -50%);
+    		transform: translate(-50%, -50%);
+    		font-size: 8rem;
+    		font-weight: 900;
+    		color: #fff;
+		}
+
+		.scrolly .step {
+    		margin: 0 auto 2rem auto;
+		}
+
+		.scrolly .step:last-child {
+    		margin-bottom: 0;
+		}
+
+		.scrolly .step p {
+    		text-align: center;
+    		padding: 1rem;
+    		font-size: 1.2rem;
+		}
+
+		.scrolly .step-highlight {
+			background:white; color:#b3477d; font-weight:bold;
+		}
+
+
+		.scrolly iframe {
+   			border: none;
+		}
+	}
