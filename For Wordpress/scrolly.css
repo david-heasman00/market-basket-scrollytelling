@@ -1,5 +1,12 @@
 /*To go in additional css box in wordpress */
 
+/* Viewport Height fix for mobile and desktop */
+:root { --vh: 1vh; }
+.scrolly {
+  /* make each story fill the true viewport height */
+  height: calc(var(--vh) * 100);
+}
+
 /* ------------------------------------------------- */
 /* Global (applies to all)                          */
 /* (If you have any universal styles that aren’t     */
