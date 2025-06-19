@@ -2,26 +2,26 @@
 	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script> 
 	<script src="https://unpkg.com/scrollama"></script>
 	<script>
-		// using d3 for convenience
-		var scrolly = d3.selectAll(".scrolly");
-		var figure = scrolly.select("figure");
-		var article = scrolly.select("article");
-		var step = article.selectAll(".step");
-		
-		//Grab flourish url from the scrolly block
-		const linkHead = scrolly.attr("data-story")
+	// Grab scrollytelling block with d3 globally and iterate for each block
+	d3.selectAll(".scrolly").each(function() {
+		const container = d3.select(this);
+		const figure = scrolly.select("figure");
+		const linkHead = container.attr("data-story")
+		const article = scrolly.select("article");
+		const steps = article.selectAll(".step");
 
-// initialize the scrollama
-		var scroller = scrollama();
+		//initiliaze scrollama
+		const scroller = scrollama();
+
 
 // generic window resize listener event
 		function handleResize() {
     		// 1. update height of step elements
-    		var stepH = Math.floor(window.innerHeight * 1.2);
-    		step.style("height", stepH + "px");
+    		const stepH = Math.floor(window.innerHeight * 1.2);
+    		steps.style("height", stepH + "px");
 
-    		var figureHeight = window.innerHeight * 0.75;
-    		var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+    		const figureHeight = window.innerHeight * 0.75;
+    		const figureMarginTop = (window.innerHeight - figureHeight) / 2;
 
     		figure
         		.style("height", figureHeight + "px")
@@ -31,41 +31,25 @@
     		scroller.resize();
 		}	
 
-		// scrollama event handlers
-		function handleStepEnter(response) {
-    		console.log(response);
-    		// response = { element, direction, index }
-
-    		// add color to current step only
-    		step.classed("is-active", function (d, i) {
-        		return i === response.index;
-    		});
-
-    		// update graphic based on step - adapted for Flourish
-
-    		const slide = response.index
-
-    		d3.select('figure iframe')
-        		.attr('src', linkHead + slide);
+		//scrollama event handlers
+		function handleSepEnter({index}) {
+			steps.classed("is-active", (d,i) => i === index);
+			figure.select("iframe")
+				.attr("src", linkHead + index);
 		}
 
-		function init() {
+		//Initialise, handle resize, setup scroller passing options and bind scrollama event handlers
 
-    		// 1. force a resize on load to ensure proper dimensions are sent to scrollama
-    		handleResize();
+		scroller
+			.setup({
+				step: container.selectAll(".step").nodes(), //only this story steps
+				offset: 0.75,
+				debug: false
+			})
+			.onStepEnter(handleStepEnter);
 
-    		// 2. setup the scroller passing options
-    		// 		this will also initialize trigger observations
-    		// 3. bind scrollama event handlers (this can be chained like below)
-    		scroller
-        		.setup({
-            		step: ".scrolly article .step",
-            		offset: 0.75,
-            		debug: false
-        		})
-        		.onStepEnter(handleStepEnter);
-		}
-
-		// kick things off
-		init();
+		//kick it off
+		handleResize();
+		window.addEventListener('resize', handleResize);
+	});
 </script>
