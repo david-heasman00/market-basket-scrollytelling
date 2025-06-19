@@ -5,9 +5,9 @@
 	// Grab scrollytelling block with d3 globally and iterate for each block
 	d3.selectAll(".scrolly").each(function() {
 		const container = d3.select(this);
-		const figure = scrolly.select("figure");
-		const linkHead = container.attr("data-story")
-		const article = scrolly.select("article");
+		const figure = container.select("figure");
+		const linkHead = container.attr("data-story");
+		const article = container.select("article");
 		const steps = article.selectAll(".step");
 
 		//initiliaze scrollama
@@ -32,7 +32,7 @@
 		}	
 
 		//scrollama event handlers
-		function handleSepEnter({index}) {
+		function handleStepEnter({index}) {
 			steps.classed("is-active", (d,i) => i === index);
 			figure.select("iframe")
 				.attr("src", linkHead + index);
