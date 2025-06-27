@@ -96,7 +96,17 @@
 
 		.step {
    			margin: 0 auto 2rem auto;
+			/* Make first step start low and off screen */
+			opacity: 0;
+  			transform: translateY(20px);
+  			transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 		}
+
+		.scrolly .step.is-active {
+		/* Activate first step when its active */
+		opacity: 1;
+  		transform: translateY(0);
+	}
 
 		.step:last-child {
    			margin-bottom: 0;
@@ -213,10 +223,20 @@
 
 		.step {
     		margin: 0 auto 2rem auto;
+			opacity: 0;
+  			transform: translateY(20px);
+  			transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 		}
+
+		.scrolly .step.is-active {
+		/* Activate first step when its active */
+		opacity: 1;
+  		transform: translateY(0);
+	}
 
 		.step:last-child {
     		margin-bottom: 0;
+			
 		}
 
 		.step p {
